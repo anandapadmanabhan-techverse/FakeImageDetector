@@ -3,26 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fake or Real Image Detection</title>
+    <title>Fake Image Detector</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <div class="logo">FID</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="container">
-        <h1>Fake or Real Image Detector...!!</h1>
-        <input type="file" id="imageInput" accept="image/*">
-        <button onclick="uploadImage()">Upload Image</button>
+        <h1>Fake Image Detector</h1>
+        <p>Fake Image Detector, a powerful tool for detecting manipulated images.</p>
+        
+        <div class="upload-box">
+            <input type="file" id="imageInput" accept="image/*" hidden>
+            <label for="imageInput" class="upload-btn">Upload Image</label>
+        </div>
+
         <div id="output"></div>
         <div id="accuracy"></div>
         <div id="toolUsed"></div>
+
+        <p class="note">Note: Clear, high-resolution images provide better detection accuracy.</p>
     </div>
 
     <script>
+        document.getElementById("imageInput").addEventListener("change", uploadImage);
+
         function uploadImage() {
             let input = document.getElementById('imageInput');
             if (input.files.length === 0) {
                 alert("Please select an image first.");
                 return;
             }
+
             let formData = new FormData();
             formData.append("image", input.files[0]);
 
