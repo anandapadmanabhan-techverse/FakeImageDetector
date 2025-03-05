@@ -8,32 +8,48 @@
 </head>
 <body>
     <header>
-        <div class="logo">FID</div>
+        <a href="index.html" class="logo">FID</a>
+        <!-- <div class="logo">FID</div> -->
         <nav>
-            <ul></ul>
+            <ul>
+                <!-- <li><a href="#">Home</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li> -->
+            </ul>
         </nav>
     </header>
+    <!-- New Sub-Heading -->
+    <h2 class="sub-heading">Fake Image Detector</h2>
+    <p class="description">Fake Image Detector, a powerful tool for detecting manipulated images.</p>
 
-    <div class="title-section">
-        <h1>Fake Image Detector</h1>
-        <p>Fake Image Detector, a powerful tool for detecting manipulated images.</p>
-    </div>
+    <!-- Divider Line -->
+    <hr class="divider">
 
     <div class="container">
-        <div class="upload-box" id="uploadBox">
+        <h1>Upload the Image</h1>
+        <!-- <p>Fake Image Detector, a powerful tool for detecting manipulated images.</p> -->
+        
+        <div class="upload-box">
             <input type="file" id="imageInput" accept="image/*" hidden>
             <label for="imageInput" class="upload-btn">Upload Image</label>
         </div>
-        
-        <div id="imagePreview"></div>
-        <div id="output"></div>
-        <div id="accuracy"></div>
-        <div id="toolUsed"></div>
-        
+
+        <!-- Image Preview Centered -->
+        <div class="image-container">
+            <img id="uploadedImage" src="" alt="Uploaded Image" style="display: none;">
+        </div>
+
+        <!-- Action Buttons -->
         <div id="actionButtons" style="display: none;">
             <button class="back-btn" onclick="resetUpload()">Back</button>
             <button class="check-btn" onclick="uploadImage()">Check</button>
         </div>
+
+        <div id="output"></div>
+        <div id="accuracy"></div>
+        <div id="toolUsed"></div>
 
         <p class="note">Note: Clear, high-resolution images provide better detection accuracy.</p>
     </div>
