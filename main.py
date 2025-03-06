@@ -35,7 +35,7 @@ def predict():
             confidence, predicted_class = torch.max(probs, dim=-1)
 
         # Convert class index to label (Assumption: 0 = "Real", 1 = "Fake")
-        result = "No Manipulation Detected" if predicted_class.item() == 0 else "Fake Image Detected..!!"
+        result = "No Manipulation Detected..!!" if predicted_class.item() == 0 else "Fake Image Detected..!!"
         accuracy = round(confidence.item() * 100, 2)
 
         return jsonify({'result': result, 'accuracy': accuracy})
