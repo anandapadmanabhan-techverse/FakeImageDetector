@@ -18,6 +18,9 @@ header {
 }
 
 .logo {
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+    gap: 10px; /* Adds spacing between logo and text */
     font-size: 24px;
     font-weight: bold;
     color: white;
@@ -28,6 +31,17 @@ header {
     color: #f58610; /* Changes color on hover */
 }
 
+.logo span {
+    display: flex;
+    align-items: center;
+    line-height: 1; /* Helps with text alignment */
+}
+
+.logo img {
+    height: 40px; /* Adjust size */
+    width: auto;
+    margin-right: 10px; /* Space between image and text */
+}
 
 nav ul {
     list-style: none;
