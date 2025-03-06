@@ -8,8 +8,10 @@
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">FID</a>
-        <!-- <div class="logo">FID</div> -->
+        <a href="index.html" class="logo">
+            <img src="face-detection.png" alt="FID Logo" width="50" height="50">
+            <span>FID | Fake Image Detector</span>
+        </a>
         <nav>
             <ul>
                 <!-- <li><a href="#">Home</a></li>
@@ -43,6 +45,7 @@
 
         <!-- Action Buttons -->
         <div id="actionButtons" style="display: none;">
+            <br>
             <button class="back-btn" onclick="resetUpload()">Back</button>
             <button class="check-btn" onclick="uploadImage()">Check</button>
         </div>
@@ -50,7 +53,7 @@
         <div id="output"></div>
         <div id="accuracy"></div>
         <div id="toolUsed"></div>
-
+        <hr class="divider">
         <p class="note">Note: Clear, high-resolution images provide better detection accuracy.</p>
     </div>
 
